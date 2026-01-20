@@ -1,0 +1,6 @@
+Name: Faloye Aayobami
+Matric Number:23CG034074
+Machine Learning Algorithm Used: Random Forest Regressor
+Model persistence method used: Pickle
+Live URL of the hosted application: https://your-app-name.onrender.com (Replace with actual URL after deployment)
+GitHub repository link: https://github.com/yourusername/HousePrice_Project (Replace with actual link)
