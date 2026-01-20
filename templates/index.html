@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="form-group">
+                <label for="OverallQual">Overall Quality (1-10)</label>
+                <input type="number" name="OverallQual" id="OverallQual" min="1" max="10" required>
+            </div>
+            <div class="form-group">
+                <label for="GrLivArea">Living Area (sq ft)</label>
+                <input type="number" name="GrLivArea" id="GrLivArea" required>
+            </div>
+            <div class="form-group">
+                <label for="TotalBsmtSF">Total Basement (sq ft)</label>
+                <input type="number" name="TotalBsmtSF" id="TotalBsmtSF" required>
+            </div>
+            <div class="form-group">
+                <label for="GarageCars">Garage Cars (0-4)</label>
+                <input type="number" name="GarageCars" id="GarageCars" min="0" max="4" required>
+            </div>
+            <div class="form-group">
+                <label for="FullBath">Full Bathrooms</label>
+                <input type="number" name="FullBath" id="FullBath" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="YearBuilt">Year Built</label>
+                <input type="number" name="YearBuilt" id="YearBuilt" min="1800" max="2025" required>
+            </div>
+            <button type="submit" class="btn">Predict Price</button>
+        </form>
+
+        <div class="result">
+            <h3>{{ prediction_text }}</h3>
+        </div>
+    </div>
+</body>
+</html>
