@@ -4,3 +4,4 @@ flask
 numpy
 joblib
 requests
+gunicorn
